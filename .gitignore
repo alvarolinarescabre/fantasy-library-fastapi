@@ -131,6 +131,4 @@ dmypy.json
 
 # Mac
 .DS_Store
-
-# .gitignore
-.gitignore
+.idea
