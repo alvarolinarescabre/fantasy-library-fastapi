@@ -1,2 +1,15 @@
+aiofiles
+aiohttp
+bcrypt
 fastapi
+gunicorn
+Jinja2
+motor
+pydantic[email]
+pyjwt
+pymongo
+redis
+uvloop
+uvicorn[standart]
+websockets
 reflex
