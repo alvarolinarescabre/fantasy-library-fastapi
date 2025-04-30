@@ -4,17 +4,18 @@ services:
     build:
       context: .
       args:
-        requirements_file: ./requirements.txt
+        requirements_file: requirements.txt
     stdin_open: true
     tty: true
     ports:
       - "8000:8000"
+    environment:
+      DB_URL: mongodb://root:root@mongodb/fantasy_library?authSource=admin
     volumes:
       - ./app:/app
       - ./data:/data
     depends_on:
       - mongodb
-    env_file: .env
     restart: always
     networks:
       - app-network
