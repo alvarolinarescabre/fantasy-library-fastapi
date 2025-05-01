@@ -1,4 +1,4 @@
-FROM python:3.13
+FROM python:3.12-alpine
 
 LABEL maintainer="alvarolinarescabre@gmail.com"
 
@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 
 # Copy the requirements file to leverage Docker cache
-COPY requirements.txt /app/requirements.txt
+COPY ./requirements.txt /app/requirements.txt
 
 RUN pip install --upgrade pip && pip install -r /app/requirements.txt
 
